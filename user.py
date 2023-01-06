@@ -110,7 +110,7 @@ class user:
         # 友情点
         add_fp = data['response'][0]['success']['addFriendPoint']
         total_fp = data['cache']['replaced']['tblUserGame'][0]['friendPoint']
-        res += f'友情点: {add_fp} / {total_fp}`\n'
+        res += f'友情点: {add_fp} / {total_fp}\n'
 
         # 登陆奖励
         if 'seqLoginBonus' in data['response'][0]['success']:
@@ -130,7 +130,7 @@ class user:
             res += '`'
 
         server_now_time = mytime.TimeStampToString(data['cache']['serverTime'])
-        res += f'_{server_now_time}_\n--------\n'
+        res += f'{server_now_time}\n--------\n'
         print(res)
         return res
 
